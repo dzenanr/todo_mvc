@@ -1,7 +1,8 @@
 # todo_mvc 
 
-**Categories**: dartling, class models. 
+**Categories**: dartling, client-server, json, MongoDB. 
 
 ## Description: 
-todo_mvc project uses 
-[dartling] (https://github.com/dzenanr/dartling) for the model.
+Client-server application with [dartling](https://github.com/dzenanr/dartling) on a client and on the server. 
+Local storage used on a client. 
+MongoDB used on the server.

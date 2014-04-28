@@ -85,6 +85,12 @@ class Todos implements ActionReactionApi {
           } else {
             _remove(transactionAction.entity);
           }
+        } else if (transactionAction is AddAction) {
+          if (transactionAction.undone) {
+            _remove(transactionAction.entity);
+          } else {
+            add(transactionAction.entity);
+          }
         }
       }
     } else if (action is AddAction) {

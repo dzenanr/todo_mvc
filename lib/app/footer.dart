@@ -20,8 +20,7 @@ class Footer {
     _clearCompleted.onClick.listen((MouseEvent e) {
       var transaction = new Transaction('clear-completed', session);
       for (Task task in _tasks.completed) {
-        transaction.add(
-            new RemoveAction(session, _tasks.completed, task));
+        transaction.add(new RemoveAction(session, _tasks, task));
       }
       transaction.doit();
     });

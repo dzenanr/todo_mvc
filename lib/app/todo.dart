@@ -41,7 +41,12 @@ class Todo {
       if (e.keyCode == KeyCode.ENTER) {
         var value = edit.value.trim();
         if (value != '') {
-          new SetAttributeAction(session, task, 'title', value).doit();
+          var transaction = new Transaction('edit-title', session);
+          transaction.add(new RemoveAction(session, tasks, task));
+          var updatedTask = new Task.withId(task.concept, value);
+          updatedTask.completed = task.completed;
+          transaction.add(new AddAction(session, tasks, updatedTask));
+          transaction.doit();
         }
       }
     });

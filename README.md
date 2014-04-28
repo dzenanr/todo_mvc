@@ -6,7 +6,6 @@
 Client-server application with [dartling](https://github.com/dzenanr/dartling) 
 on a client and on the server. 
 Local storage used on a client. 
-MongoDB used on the server.
 
 This project is based on the last spiral of 
 [dartling_todo_mvc_spirals](https://github.com/dzenanr/dartling_todo_mvc_spirals)
